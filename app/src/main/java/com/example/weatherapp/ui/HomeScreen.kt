@@ -6,12 +6,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.example.weatherapp.R
 import com.example.weatherapp.model.Coordinates
 import com.example.weatherapp.model.WeatherInfo
 import com.example.weatherapp.viewmodel.UIState
@@ -82,20 +84,20 @@ fun CurrentDetails(humid: Short, visibility: Int, windSpeed: Float, degree: Shor
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colors.secondary,
-            text = "Details"
+            text = stringResource(R.string.details)
         )
         Row(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 36.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Column {
-                Text(fontSize = 16.sp, text = "Wind: $windSpeed m/s")
-                Text(fontSize = 16.sp, text = "Direction: ${getCardinalDirection(degree.toDouble())}")
+                Text(fontSize = 16.sp, text = stringResource(R.string.wind) +" $windSpeed m/s")
+                Text(fontSize = 16.sp, text = stringResource(R.string.direction) +" ${getCardinalDirection(degree.toDouble())}")
 
             }
             Column {
-                Text(fontSize = 16.sp, text = "Humidity: $humid%")
-                Text(fontSize = 16.sp, text = "Visibility: ${visibility/1000} k/m")
+                Text(fontSize = 16.sp, text = stringResource(R.string.humidity) +" $humid%")
+                Text(fontSize = 16.sp, text = stringResource(R.string.visibility) +" ${visibility/1000} k/m")
             }
         }
 
@@ -128,14 +130,14 @@ fun WeatherNow(weather: String, desc: String, icon: String, temp: Int, feel: Int
                 )
                 Text(
                     fontSize = 18.sp,
-                    text = "Feels like $feel\u2103"
+                    text = stringResource(R.string.feels_like) +" $feel\u2103"
                 )
             }
             Column {
 
                 AsyncImage(
                     model = icon,
-                    contentDescription = "Current Weather Icon",
+                    contentDescription = stringResource(R.string.current_icon),
                     contentScale = ContentScale.FillWidth,
                     modifier = Modifier
                         .height(60.dp)

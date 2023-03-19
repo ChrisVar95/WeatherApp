@@ -19,6 +19,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.weatherapp.R
 import com.example.weatherapp.model.Coordinates
 import com.example.weatherapp.ui.theme.WeatherAppTheme
 import com.example.weatherapp.viewmodel.UIState
@@ -64,7 +65,7 @@ class MainActivity : ComponentActivity() {
                         //Only approximate location access granted.
                         viewModel.getLocationLiveData().getLocationData()
                     } else -> {
-                    Toast.makeText(this, "Location permissions not granted, coordinates are not retrieved",
+                    Toast.makeText(this, getString(R.string.permissions_not_granted),
                         Toast.LENGTH_SHORT).show()
                 }
                 }

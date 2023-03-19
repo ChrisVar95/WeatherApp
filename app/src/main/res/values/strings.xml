@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Weather App</string>
+    <string name="info_openweather_API">App uses OpenWeather API: https://openweathermap.org/</string>
+    <string name="info_developer">Developed by Christina Vargka</string>
+    <string name="info_API">API</string>
+    <string name="info_courseInfo">Mobile Programming with Native Technologies ID00CS48-3002 (Spring 2023)</string>
+    <string name="info_course">Course</string>
+    <string name="wind">Wind: </string>
+    <string name="direction">Direction: </string>
+    <string name="humidity">Humidity: </string>
+    <string name="visibility">Visibility: </string>
+    <string name="details">Details</string>
+    <string name="feels_like">Feels like </string>
+    <string name="current_icon">Current Weather Icon</string>
+    <string name="permissions_not_granted">Location permissions not granted, coordinates are not retrieved</string>
 </resources>
