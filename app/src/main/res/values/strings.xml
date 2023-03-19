@@ -13,4 +13,6 @@
     <string name="feels_like">Feels like </string>
     <string name="current_icon">Current Weather Icon</string>
     <string name="permissions_not_granted">Location permissions not granted, coordinates are not retrieved</string>
+    <string name="error">Error</string>
+    <string name="error_message">Error retrieving data from API</string>
 </resources>

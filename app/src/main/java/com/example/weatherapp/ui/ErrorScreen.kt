@@ -11,9 +11,11 @@ import androidx.compose.material.icons.outlined.Info
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.weatherapp.R
 
 @Composable
 fun ErrorScreen() {
@@ -24,11 +26,11 @@ fun ErrorScreen() {
         Icon(
             modifier = Modifier.size(250.dp, 250.dp),
             imageVector = Icons.Outlined.Info,
-            contentDescription = "Error",
+            contentDescription = stringResource(R.string.error),
             tint = MaterialTheme.colors.error
         )
         Text(
-            text = "Error retrieving data from API",
+            text = stringResource(R.string.error_message),
             fontWeight = FontWeight.Bold,
             fontSize = 18.sp
         )

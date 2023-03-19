@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 const val BASE_URL = "https://api.openweathermap.org"+"/data/2.5/"
-const val API = "9ce2a19227c8f296ee2eca6cfb645505"
+const val API = /*TODO*/""
 const val UNIT = "metric"
 
 
