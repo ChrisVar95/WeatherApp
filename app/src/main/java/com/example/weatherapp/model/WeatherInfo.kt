@@ -7,7 +7,7 @@ data class Weather(
 )
 
 data class Main(
-    var temp: String,
+    var temp: Float,
     var feels_like: Float,
     var humidity: Short,
 )
@@ -22,5 +22,6 @@ data class WeatherInfo(
     var main: Main,
     var wind: Wind,
     var visibility: Int,
-    var name: String
+    var name: String,
+    var dt: Int
 )

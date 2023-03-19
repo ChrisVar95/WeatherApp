@@ -2,7 +2,7 @@ package com.example.weatherapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val Primary0 = Color(0xFFF143B4)
+val Primary1 = Color(0xFF0C4F9C)
+val Primary2 = Color(0xFF000270)
+val Secondary = Color(0xFFEBB046)
