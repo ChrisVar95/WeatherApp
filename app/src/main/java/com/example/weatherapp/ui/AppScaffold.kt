@@ -12,13 +12,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
 @Composable
 fun AppScaffold(navController: NavController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    var currentRoute = navBackStackEntry?.destination?.route ?: "Weather Now"
+    val currentRoute = navBackStackEntry?.destination?.route ?: "Current Weather"
     TopAppBar(
         navigationIcon = {
             if (currentRoute == "Info") {
@@ -27,19 +28,25 @@ fun AppScaffold(navController: NavController) {
                 }
             } else {
 
-                IconButton(enabled = false, onClick = { /*TODO*/ }){}
+                IconButton(enabled = false, onClick = {  }){}
             }
         },
-        title = { Text(modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center, text = currentRoute)
+        title = {
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                fontSize = 24.sp,
+                text = currentRoute
+            )
         },
         actions = {
-            if (currentRoute == "Weather Now") {
+            if (currentRoute == "Current Weather") {
                 IconButton(onClick = { navController.navigate("Info"){} }) {
                     Icon(imageVector = Icons.Filled.Info, contentDescription = "Information about the app")
                 }
             } else {
 
-                IconButton(enabled = false, onClick = { /*TODO*/ }){}
+                IconButton(enabled = false, onClick = {  }){}
             }
         }
     )

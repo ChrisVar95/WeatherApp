@@ -28,8 +28,6 @@ class WeatherAppViewModel(context: Context): ViewModel() {
     fun getWeather(lat: Double, lon: Double) {
         viewModelScope.launch{
             var weatherAPI: WeatherAPI? = null
-            Log.d("UIState", "${uiState}")
-
             // To prevent excessive calls to API I added if statement
             // I exceeded the limit one too many times
             if (uiState == UIState.Loading){

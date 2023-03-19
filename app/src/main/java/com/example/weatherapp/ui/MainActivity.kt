@@ -102,9 +102,9 @@ fun AppNavController(navController: NavHostController, location: Coordinates?, u
 
     NavHost(
         navController = navController,
-        startDestination = "Weather Now",
+        startDestination = "Current Weather",
     ) {
-        composable(route = "Weather Now"){
+        composable(route = "Current Weather"){
             HomeScreen(location = location, uiState = uiState, navController)
         }
         composable(route = "Info"){
